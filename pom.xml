@@ -58,7 +58,7 @@
 				</executions>
 				<configuration>
 					<imageName>test-jenkins/${project.artifactId}:${project.version}</imageName>
-					<dockerHost>http://47.99.209.45:2375</dockerHost>
+					<dockerHost>http://47.99.209.45:8686</dockerHost>
 					<baseImage>java:8</baseImage>
 					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
 					<resources>
