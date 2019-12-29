@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.security</groupId>
 	<artifactId>demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>demo</name>
 	<description>Spring security project for Spring Boot</description>
 
@@ -46,19 +46,12 @@
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
-				<version>1.1.0</version>
-				<executions>
-					<execution>
-						<id>build-image</id>
-						<phase>package</phase>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
-				</executions>
+				<version>0.4.13</version>
+
 				<configuration>
-					<imageName>test-jenkins/${project.artifactId}:${project.version}</imageName>
+					<imageName>47.99.209.45:5000/${project.artifactId}:${project.version}</imageName>
 					<dockerHost>http://47.99.209.45:2375</dockerHost>
+<!--					<dockerHost>http://121.41.102.206:2375</dockerHost>-->
 					<baseImage>java:8</baseImage>
 					<entryPoint>["java", "-jar","/${project.build.finalName}.jar"]</entryPoint>
 					<resources>
