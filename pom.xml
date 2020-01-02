@@ -50,7 +50,7 @@
 
 				<configuration>
 					<imageName>47.99.209.45:5000/${project.artifactId}:${project.version}</imageName>
-					<dockerHost>http://47.99.209.45:2375</dockerHost>
+					<dockerHost>http://47.99.209.45:7365</dockerHost>
 <!--					<dockerHost>http://121.41.102.206:2375</dockerHost>-->
 					<baseImage>java:8</baseImage>
 					<entryPoint>["java", "-jar","/${project.build.finalName}.jar"]</entryPoint>
